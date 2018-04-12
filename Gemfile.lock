@@ -1,0 +1,23 @@
+PATH
+  remote: .
+  specs:
+    smoney (0.0.1)
+      json
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    json (2.1.0)
+    minitest (5.11.3)
+    rake (12.3.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest
+  rake
+  smoney!
+
+BUNDLED WITH
+   1.15.4
