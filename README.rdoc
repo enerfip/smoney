@@ -1,3 +1,9 @@
-= SmoneyClient
+= Smoney
 
-This project rocks and uses MIT-LICENSE.
+This project is a Ruby client for the Smoney API.
+
+API doc : https://api.s-money.fr/
+
+== License
+
+This project is under MIT-LICENSE.
