@@ -4,6 +4,16 @@ This project is a Ruby client for the Smoney API.
 
 API doc : https://api.s-money.fr/
 
+== TODO
+
+* Documentation
+* Tests (gosh...)
+* Make configuration more standardish
+* Rely on HTTParty instead of the custom HTTP client
+* Get rid of ActiveSupport dependency
+* Start versioning and releases
+* Add badges to readme :)
+
 == License
 
 This project is under MIT-LICENSE.
