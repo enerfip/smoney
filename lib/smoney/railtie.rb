@@ -1,5 +1,5 @@
 module Smoney
   class Railtie < Rails::Railtie
-    config.smoney_client = ActiveSupport::OrderedOptions.new
+    config.smoney = ActiveSupport::OrderedOptions.new
   end
 end
