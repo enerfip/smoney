@@ -26,4 +26,7 @@ module Smoney
   end
 end
 
-Dir[__dir__ + '**/*.rb'].each {|file| require file }
+Dir.glob(__dir__ + "/smoney/entity/**/*.rb").each {|file| require file }
+Dir.glob(__dir__ + "/smoney/ext/**/*.rb").each {|file| require file }
+Dir.glob(__dir__ + "/smoney/http/**/*.rb").each {|file| require file }
+Dir.glob(__dir__ + "/smoney/*.rb").each {|file| require file }
