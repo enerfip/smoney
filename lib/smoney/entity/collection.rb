@@ -1,5 +1,6 @@
 require "uri"
 require_relative "client"
+require_relative "post_error"
 
 module Smoney
   module Entity
@@ -47,6 +48,12 @@ module Smoney
 
       def post(object)
         entity_class.from_data client(_url).post(object.to_json).from_json
+      end
+
+      def post!(object)
+        post(object).tap do |response_object|
+          raise Smoney::Entity::PostError.new(response_object) if response_object.error?
+        end
       end
 
       def delete(object)

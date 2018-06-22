@@ -63,6 +63,10 @@ module Smoney
       def data=(hash = {})
         @data = hash
       end
+
+      def error?
+        data["ErrorMessage"].present?
+      end
     end
   end
 end
