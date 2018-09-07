@@ -2,6 +2,8 @@ require "uri"
 require_relative "client"
 require_relative "operations"
 require_relative "attributes"
+require_relative "collection"
+require_relative "post_error"
 
 module Smoney
   module Entity
