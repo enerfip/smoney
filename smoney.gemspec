@@ -17,6 +17,5 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "json"
-  s.add_dependency "activesupport"
   s.add_development_dependency "minitest"
 end
