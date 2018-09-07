@@ -1,4 +1,4 @@
-require 'smoney/railtie' if defined?(Rails)
+require 'railtie' if defined?(Rails)
 require 'cgi'
 
 module Smoney
@@ -28,7 +28,6 @@ end
 
 require "active_support"
 require "active_support/core_ext/string"
-require "railtie" if defined? Rails
 Dir.glob(__dir__ + "/smoney/entity/**/*.rb").each {|file| require file }
 Dir.glob(__dir__ + "/smoney/ext/**/*.rb").each {|file| require file }
 Dir.glob(__dir__ + "/smoney/http/**/*.rb").each {|file| require file }
