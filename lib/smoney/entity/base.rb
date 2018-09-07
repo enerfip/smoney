@@ -48,7 +48,7 @@ module Smoney
       end
 
       def to_json
-        hash = @data
+        hash = @data.splice(self.class.attributes.keys)
         objects.map do |variable|
           object = instance_variable_get("@" + variable.to_s)
           hash[map_attribute variable.to_sym] = JSON.parse object.to_json if object
