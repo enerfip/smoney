@@ -10,7 +10,7 @@ module Smoney
       def get(id = nil)
         url = @url.gsub '/oneshot', "#{ '/' + id.to_s if id }"
         if id
-          self.class.entitiy_class.from_data client(url).get.from_json
+          self.class.entity_class.from_data client(url).get.from_json
         else
           client(url).get.from_json.map { |data| entity_class.from_data(data) }
         end
