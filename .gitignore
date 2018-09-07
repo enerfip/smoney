@@ -2,4 +2,3 @@
 log/*.log
 pkg/
 .DS_Store
-.byebug_history
