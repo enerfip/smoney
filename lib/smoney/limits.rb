@@ -4,7 +4,7 @@ module Smoney
       attr_reader :annual_allowance, :used_allowance, :renewal_date
       def initialize(h)
         @annual_allowance = h['AnnualAllowance']
-        @used_allowance = h['UsedAllowance']
+        @used_allowance = h['UsedAllowance'].to_i
         @renewal_date = DateTime.parse(h['RenewalDate']) if h['RenewalDate']
       end
 
