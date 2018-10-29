@@ -3,7 +3,7 @@ module Smoney
     class Limit
       attr_reader :annual_allowance, :used_allowance, :renewal_date
       def initialize(h)
-        @annual_allowance = h['AnnualAllowance']
+        @annual_allowance = h['AnnualAllowance'].to_i
         @used_allowance = h['UsedAllowance'].to_i
         @renewal_date = DateTime.parse(h['RenewalDate']) if h['RenewalDate']
       end
