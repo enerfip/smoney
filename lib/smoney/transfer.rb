@@ -1,14 +1,15 @@
 require_relative "fee"
 require_relative "account_ref"
 require_relative "bank_account"
+require_relative "bank_account_ref"
 
 module Smoney
   class Transfer < Entity::Base
-    PATH = "moneyouts/oneshot"
+    PATH = "payouts/storedbankaccounts"
 
     collection do
       def get(id = nil)
-        url = @url.gsub '/oneshot', "#{ '/' + id.to_s if id }"
+        url = @url.gsub '/storedbankaccounts', "#{ '/' + id.to_s if id }"
         if id
           self.class.entity_class.from_data client(url).get.from_json
         else
@@ -21,7 +22,7 @@ module Smoney
 
     value    :id
     object   :account_id, class_name: Smoney::AccountRef
-    object   :bank_account
+    object   :bank_account, class_name: Smoney::BankAccountRef
     value    :amount
     value    :message
     value    :motif
