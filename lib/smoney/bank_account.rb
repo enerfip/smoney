@@ -19,6 +19,13 @@ module Smoney
     def _url(_id = _key)
       "#{ path }/#{PATH}#{ '/' + _id.to_s if _id }"
     end
+
+    def upload(rib)
+      response = client("#{_url}/rib/attachments").multipart [rib]
+      if ('400'..'599').include? response.code
+        raise Exception.new(response.to_s + response.body)
+      end
+    end
   end
 end
 
