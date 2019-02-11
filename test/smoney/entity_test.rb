@@ -6,6 +6,6 @@ class Smoney::EntityTest < Minitest::Test
     assert_equal(address.to_json, "{\"Street\":\"21 Jump St\",\"ZipCode\":\"12345\",\"City\":\"NY\",\"Country\":\"US\"}")
 
     bank_account = Smoney::BankAccount.from_data "Demands"=>nil, "Id"=>1142, "DisplayName"=>"Bank Account", "Bic"=>"XXX", "Iban"=>"FR313x", "IsMine"=>true, "Status"=>1, "Holder"=>nil
-    assert_equal(bank_account.to_json, "{\"Id\":1142,\"DisplayName\":\"Bank Account\",\"Bic\":\"XXX\",\"Iban\":\"FR313x\",\"IsMine\":true}")
+    assert_equal(bank_account.to_json, "{\"Id\":1142,\"DisplayName\":\"Bank Account\",\"Bic\":\"XXX\",\"Iban\":\"FR313x\",\"IsMine\":true,\"Status\":1}")
   end
 end
