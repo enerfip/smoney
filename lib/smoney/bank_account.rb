@@ -11,6 +11,19 @@ module Smoney
     value :bic
     value :iban
     value :mine, map_to: "IsMine"
+    value :status
+
+    def validated?
+      status.to_s == "1"
+    end
+
+    def refused?
+      status.to_s == "3"
+    end
+
+    def waiting_validation?
+      status.to_s == "2"
+    end
 
     def path
       base_url || "#{Smoney.url}"
