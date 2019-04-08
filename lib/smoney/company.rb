@@ -6,5 +6,6 @@ module Smoney
 
     value :name
     value :siret
+    value :naf
   end
 end
